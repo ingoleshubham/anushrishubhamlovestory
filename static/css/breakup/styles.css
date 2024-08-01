@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p.subtitle {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#couple-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+#couple-img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    border: 5px solid rgba(15, 90, 124, 0.8);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#couple-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #fff;
+    background: rgba(15, 90, 124, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+    cursor: pointer;
+}
+
+#couple-container:hover .overlay-text {
+    display: block;
+}
+
+#message {
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: 1px dotted black;
+    color: aqua;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: rgba(15, 90, 124, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -125px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    pointer-events: none; /* Disable pointer events */
+}
+
+.tooltip .tooltiptext::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(15, 90, 124, 0.8) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+/* Remove underline & color */
+.love-story-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent element */
+    cursor: pointer; /* Show pointer cursor to indicate clickable link */
+}
+
+/* Set a specific color for the heading */
+.love-story-link h1 {
+    color: #333; /* Set your desired color */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Increase size and change color on hover */
+.love-story-link:hover h1 {
+    transform: scale(1.1); /* Increase size by 10% */
+    color: #007BFF; /* Change color to a link-like blue */
+    text-decoration: underline; /* Add underline */
+}
